@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController">
    <ImageView fitHeight="549.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" styleClass="left">
    </ImageView>
    <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="578.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" styleClass="user-image" />
