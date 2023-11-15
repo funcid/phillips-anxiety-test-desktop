@@ -8,4 +8,6 @@ module me.reidj.anxietydiagnostic {
 
     exports me.reidj.anxietydiagnostic;
     exports me.reidj.anxietydiagnostic.controller.authorization;
+    exports me.reidj.anxietydiagnostic.controller;
+    opens me.reidj.anxietydiagnostic.controller to javafx.fxml;
 }
