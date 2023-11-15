@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.Getter;
+import lombok.Setter;
 import me.reidj.anxietydiagnostic.controller.PrimaryStage;
 import me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController;
+import me.reidj.anxietydiagnostic.user.User;
 
 import java.io.IOException;
 
@@ -15,6 +17,10 @@ public class App extends Application {
 
     @Getter
     private static App app;
+
+    @Getter
+    @Setter
+    private User user;
 
     private PrimaryStage primaryStage;
     private AuthorizationController authorizationController;
@@ -25,12 +31,6 @@ public class App extends Application {
 
         primaryStage = new PrimaryStage(stage);
         authorizationController = new AuthorizationController();
-
-//        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/authorization/authorizationScene.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-//        stage.setTitle("Hello!");
-//        stage.setScene(scene);
-//        stage.show();
 
         primaryStage.setScene(authorizationController.getScene());
     }
