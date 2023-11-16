@@ -7,6 +7,8 @@ import me.reidj.anxietydiagnostic.controller.AbstractScene;
 import me.reidj.anxietydiagnostic.exception.Errors;
 import me.reidj.anxietydiagnostic.user.User;
 
+import java.util.HashMap;
+
 public class AuthorizationController extends AbstractScene {
 
     @FXML
@@ -42,7 +44,7 @@ public class AuthorizationController extends AbstractScene {
             return;
 
         if (App.getApp().getUser() == null) {
-            App.getApp().setUser(new User(name, surname, patronymic, classroom));
+            App.getApp().setUser(new User(name, surname, patronymic, classroom, new HashMap<>()));
         }
 
         App.getApp().getPrimaryStage().showScene(App.getApp().getQuestionController().getScene());
