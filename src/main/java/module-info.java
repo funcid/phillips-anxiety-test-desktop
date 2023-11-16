@@ -5,9 +5,11 @@ module me.reidj.anxietydiagnostic {
 
     opens me.reidj.anxietydiagnostic to javafx.fxml;
     opens me.reidj.anxietydiagnostic.controller.authorization to javafx.fxml;
+    opens me.reidj.anxietydiagnostic.controller.question to javafx.fxml;
     opens me.reidj.anxietydiagnostic.controller to javafx.fxml;
 
     exports me.reidj.anxietydiagnostic;
     exports me.reidj.anxietydiagnostic.controller.authorization;
+    exports me.reidj.anxietydiagnostic.controller.question;
     exports me.reidj.anxietydiagnostic.controller;
 }

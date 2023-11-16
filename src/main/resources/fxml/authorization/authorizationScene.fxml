@@ -8,21 +8,28 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController">
-   <ImageView fitHeight="549.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" styleClass="left">
-   </ImageView>
-   <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="578.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" styleClass="user-image" />
-   <TextField fx:id="nameField" layoutX="516.0" layoutY="186.0" prefHeight="35.0" prefWidth="208.0" promptText="Имя" />
-   <Label layoutX="483.0" layoutY="151.0" text="Введите данные, чтобы продолжить">
-      <font>
-         <Font size="18.0" />
-      </font>
-   </Label>
-   <TextField fx:id="surnameField" layoutX="516.0" layoutY="230.0" prefHeight="35.0" prefWidth="208.0" promptText="Фамилия" styleClass="form-label" />
-   <TextField fx:id="patronymicField" layoutX="516.0" layoutY="277.0" prefHeight="35.0" prefWidth="208.0" promptText="Отчество" styleClass="form-label" />
-   <TextField fx:id="classroomField" layoutX="516.0" layoutY="324.0" prefHeight="35.0" prefWidth="208.0" promptText="Класс" styleClass="form-label" />
-   <Button layoutX="513.0" layoutY="374.0" mnemonicParsing="false" onAction="#send" prefHeight="35.0" prefWidth="215.0" text="Начать" textFill="WHITE" />
-   <stylesheets>
-      <URL value="@authorization.css" />
-   </stylesheets>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0"
+      prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController">
+    <ImageView fitHeight="549.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" styleClass="left">
+    </ImageView>
+    <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="578.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true"
+               styleClass="user-image"/>
+    <TextField fx:id="nameField" layoutX="516.0" layoutY="186.0" prefHeight="35.0" prefWidth="208.0" promptText="Имя"/>
+    <Label layoutX="483.0" layoutY="151.0" text="Введите данные, чтобы продолжить">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="surnameField" layoutX="516.0" layoutY="230.0" prefHeight="35.0" prefWidth="208.0"
+               promptText="Фамилия" styleClass="form-label"/>
+    <TextField fx:id="patronymicField" layoutX="516.0" layoutY="277.0" prefHeight="35.0" prefWidth="208.0"
+               promptText="Отчество" styleClass="form-label"/>
+    <TextField fx:id="classroomField" layoutX="516.0" layoutY="324.0" prefHeight="35.0" prefWidth="208.0"
+               promptText="Класс" styleClass="form-label"/>
+    <Button layoutX="513.0" layoutY="374.0" mnemonicParsing="false" onAction="#send" prefHeight="35.0" prefWidth="215.0"
+            text="Начать" textFill="WHITE"/>
+    <stylesheets>
+        <URL value="@authorization.css"/>
+    </stylesheets>
 </Pane>

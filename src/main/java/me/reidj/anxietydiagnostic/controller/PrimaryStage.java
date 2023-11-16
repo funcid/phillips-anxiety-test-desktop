@@ -4,13 +4,11 @@ import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public record PrimaryStage(Stage stage) {
 
     public void setScene(Scene scene) {
         stage.setScene(scene);
-        stage.initStyle(StageStyle.TRANSPARENT);
         stage.setOnHidden(event -> Platform.exit());
         stage.sizeToScene();
         stage.setTitle("Диагностика Уровня Тревожности");

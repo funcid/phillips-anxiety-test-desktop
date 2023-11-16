@@ -24,8 +24,4 @@ public abstract class AbstractScene {
         }
         return scene;
     }
-
-    public void exitProgram() {
-        System.exit(0);
-    }
 }

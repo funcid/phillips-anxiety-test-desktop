@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import me.reidj.anxietydiagnostic.controller.PrimaryStage;
 import me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController;
+import me.reidj.anxietydiagnostic.controller.question.QuestionController;
 import me.reidj.anxietydiagnostic.user.User;
 
 import java.io.IOException;
@@ -24,13 +25,15 @@ public class App extends Application {
 
     private PrimaryStage primaryStage;
     private AuthorizationController authorizationController;
+    private QuestionController questionController;
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         app = this;
 
         primaryStage = new PrimaryStage(stage);
         authorizationController = new AuthorizationController();
+        questionController = new QuestionController();
 
         primaryStage.setScene(authorizationController.getScene());
     }
