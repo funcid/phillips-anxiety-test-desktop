@@ -8,6 +8,7 @@ import me.reidj.anxietydiagnostic.controller.PrimaryStage;
 import me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController;
 import me.reidj.anxietydiagnostic.controller.question.QuestionController;
 import me.reidj.anxietydiagnostic.controller.result.ResultController;
+import me.reidj.anxietydiagnostic.service.MailSenderService;
 import me.reidj.anxietydiagnostic.user.User;
 
 @Getter
@@ -23,6 +24,7 @@ public class App extends Application {
     private AuthorizationController authorizationController;
     private QuestionController questionController;
     private ResultController resultController;
+    private MailSenderService mailSenderService;
 
     @Override
     public void start(Stage stage) {
@@ -32,6 +34,7 @@ public class App extends Application {
         authorizationController = new AuthorizationController();
         questionController = new QuestionController();
         resultController = new ResultController();
+        mailSenderService = new MailSenderService();
 
         primaryStage.setScene(authorizationController.getScene());
     }

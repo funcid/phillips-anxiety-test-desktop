@@ -20,6 +20,16 @@
     <Button layoutX="537.0" layoutY="280.0" mnemonicParsing="false" onAction="#onYesHandler" text="ДА"/>
     <Button layoutX="597.0" layoutY="280.0" mnemonicParsing="false" onAction="#onNoHandler"
             text="Нет"/>
+    <Label layoutX="58.0" layoutY="174.0" prefHeight="60.0" prefWidth="170.0" text="Царюк Артём">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="58.0" layoutY="230.0" text="Александр Приходько">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
     <stylesheets>
         <URL value="@../../styles/index.css"/>
     </stylesheets>
