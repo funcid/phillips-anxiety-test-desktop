@@ -1,9 +1,9 @@
 .left {
-    -fx-image: url('../../images/left.png')
+    -fx-image: url('../images/left.png')
 }
 
 .user-image {
-    -fx-image: url('../../images/user.png')
+    -fx-image: url('../images/user.png')
 }
 
 .text-field {

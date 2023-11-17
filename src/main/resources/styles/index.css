@@ -1,5 +1,19 @@
 .left {
-    -fx-image: url('../../images/left.png')
+    -fx-image: url('../images/left.png')
+}
+
+.user-image {
+    -fx-image: url('../images/user.png')
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background;
 }
 
 .button {

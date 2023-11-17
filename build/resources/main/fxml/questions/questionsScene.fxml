@@ -18,9 +18,9 @@
         </font>
     </Label>
     <Button layoutX="537.0" layoutY="280.0" mnemonicParsing="false" onAction="#onYesHandler" text="ДА"/>
-    <Button fx:id="noButton" layoutX="597.0" layoutY="280.0" mnemonicParsing="false" onAction="#onNoHandler"
+    <Button layoutX="597.0" layoutY="280.0" mnemonicParsing="false" onAction="#onNoHandler"
             text="Нет"/>
     <stylesheets>
-        <URL value="@question.css"/>
+        <URL value="@../../styles/index.css"/>
     </stylesheets>
 </Pane>

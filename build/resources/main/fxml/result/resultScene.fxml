@@ -15,6 +15,6 @@
       </font>
    </Label>
     <stylesheets>
-        <URL value="@result.css" />
+        <URL value="@../../styles/index.css"/>
     </stylesheets>
 </Pane>

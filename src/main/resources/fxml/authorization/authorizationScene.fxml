@@ -22,14 +22,14 @@
         </font>
     </Label>
     <TextField fx:id="surnameField" layoutX="516.0" layoutY="230.0" prefHeight="35.0" prefWidth="208.0"
-               promptText="Фамилия" styleClass="form-label"/>
+               promptText="Фамилия"/>
     <TextField fx:id="patronymicField" layoutX="516.0" layoutY="277.0" prefHeight="35.0" prefWidth="208.0"
-               promptText="Отчество" styleClass="form-label"/>
+               promptText="Отчество"/>
     <TextField fx:id="classroomField" layoutX="516.0" layoutY="324.0" prefHeight="35.0" prefWidth="208.0"
-               promptText="Класс" styleClass="form-label"/>
+               promptText="Класс"/>
     <Button layoutX="513.0" layoutY="374.0" mnemonicParsing="false" onAction="#send" prefHeight="35.0" prefWidth="215.0"
             text="Начать" textFill="WHITE"/>
     <stylesheets>
-        <URL value="@authorization.css"/>
+        <URL value="@../../styles/index.css"/>
     </stylesheets>
 </Pane>
