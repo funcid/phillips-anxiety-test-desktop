@@ -7,19 +7,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0"
-      prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="me.reidj.anxietydiagnostic.controller.question.QuestionController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.reidj.anxietydiagnostic.controller.question.QuestionController">
     <ImageView fitHeight="549.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" styleClass="left">
     </ImageView>
     <Label fx:id="questionLabel" layoutX="399.0" layoutY="57.0" prefHeight="200.0" prefWidth="454.0" wrapText="true">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
-    <Button layoutX="537.0" layoutY="280.0" mnemonicParsing="false" onAction="#onYesHandler" text="ДА"/>
-    <Button layoutX="597.0" layoutY="280.0" mnemonicParsing="false" onAction="#onNoHandler"
-            text="Нет"/>
+    <Button layoutX="537.0" layoutY="280.0" mnemonicParsing="false" onAction="#onYesHandler" text="ДА" />
+    <Button layoutX="597.0" layoutY="280.0" mnemonicParsing="false" onAction="#onNoHandler" text="Нет" />
     <Label layoutX="58.0" layoutY="174.0" prefHeight="60.0" prefWidth="170.0" text="Царюк Артём">
         <font>
             <Font size="24.0" />
@@ -30,7 +27,12 @@
             <Font size="24.0" />
         </font>
     </Label>
+   <Label fx:id="timeLabel" layoutX="562.0" layoutY="36.0" prefHeight="19.0" prefWidth="111.0" textAlignment="CENTER">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
     <stylesheets>
-        <URL value="@../../styles/index.css"/>
+        <URL value="@../../styles/index.css" />
     </stylesheets>
 </Pane>

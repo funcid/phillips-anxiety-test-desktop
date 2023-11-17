@@ -44,7 +44,7 @@ public class AuthorizationController extends AbstractScene {
             return;
 
         if (App.getApp().getUser() == null) {
-            App.getApp().setUser(new User(name, surname, patronymic, classroom, new HashMap<>()));
+            App.getApp().setUser(new User(name, surname, patronymic, classroom, new HashMap<>(),0,0,0));
         }
 
         App.getApp().getPrimaryStage().showScene(App.getApp().getQuestionController().getScene());

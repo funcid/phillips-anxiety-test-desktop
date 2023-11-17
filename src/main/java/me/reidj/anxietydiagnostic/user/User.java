@@ -1,8 +1,22 @@
 package me.reidj.anxietydiagnostic.user;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import me.reidj.anxietydiagnostic.question.Question;
 
 import java.util.Map;
 
-public record User(String name, String surname, String patronymic, String classroom, Map<Question, String> questions) {
+@AllArgsConstructor
+@Getter
+@Setter
+public class User {
+    private final String name;
+    private final String surname;
+    private final String patronymic;
+    private final String classroom;
+    private final Map<Question, String> questions;
+    private int seconds;
+    private int minutes;
+    private int hour;
 }

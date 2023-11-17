@@ -1,6 +1,7 @@
 package me.reidj.anxietydiagnostic.controller.result;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import me.reidj.anxietydiagnostic.App;
@@ -42,13 +43,21 @@ public class ResultController extends AbstractScene {
         App.getApp().getMailSenderService().send(
                 teachetEmailTextField.getText(),
                 "Результат прохождения теста",
-                "Ученик " + user.name() + " " + user.surname() + " " + user.patronymic() + " из класса " + user.classroom() + " завершил тест! " +
-                        (Errors.FIELD_EMPTY.check(resultText) ? "Факторов выявлено небыло." : "Выявлен фактор - " + resultText)
+                (Errors.FIELD_EMPTY.check(resultText) ? "Факторов выявлено не было." : "Выявлен фактор: " + resultText + "\n" +
+                        "Класс: " + user.getSurname() + "\n" +
+                        "Ученик: " + user.getName() + " " + user.getSurname() + " " + user.getPatronymic() + "\n" +
+                        "Время прохождения: " + App.getApp().getQuestionController().formatTime())
+        );
+
+        App.getApp().getPrimaryStage().showAlert(
+                Alert.AlertType.CONFIRMATION,
+                "Сообщение успешно доставлено",
+                "Успешно!"
         );
     }
 
     private void acceptFactor(Factors factor, int index) {
-        App.getApp().getUser().questions().forEach((question, s) -> {
+        App.getApp().getUser().getQuestions().forEach((question, s) -> {
             if (index == question.index && !question.answer.equals(s)) {
                 sums[factor.ordinal()]++;
                 if (sums[factor.ordinal()] == factor.getSum()) {

@@ -16,8 +16,8 @@
          <Font size="18.0" />
       </font>
    </Label>
-   <TextField fx:id="teachetEmailTextField" layoutX="513.0" layoutY="276.0" prefHeight="25.0" prefWidth="208.0" promptText="Почтовый адрес учителя" />
-   <Button layoutX="557.0" layoutY="321.0" mnemonicParsing="false" onAction="#sendEmail" text="Отправить" />
+   <TextField fx:id="teachetEmailTextField" layoutX="483.0" layoutY="280.0" prefHeight="25.0" prefWidth="208.0" promptText="Почтовый адрес учителя" />
+   <Button layoutX="526.0" layoutY="327.0" mnemonicParsing="false" onAction="#sendEmail" text="Отправить" />
     <Label layoutX="58.0" layoutY="174.0" prefHeight="60.0" prefWidth="170.0" text="Царюк Артём">
         <font>
             <Font size="24.0" />
@@ -28,6 +28,11 @@
             <Font size="24.0" />
         </font>
     </Label>
+   <Label layoutX="419.0" layoutY="255.0" text="Отправить результат прохождения преподавателю">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
     <stylesheets>
         <URL value="@../../styles/index.css" />
     </stylesheets>

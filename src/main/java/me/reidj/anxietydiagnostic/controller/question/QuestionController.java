@@ -1,12 +1,18 @@
 package me.reidj.anxietydiagnostic.controller.question;
 
 import com.google.gson.Gson;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.util.Duration;
 import me.reidj.anxietydiagnostic.App;
 import me.reidj.anxietydiagnostic.controller.AbstractScene;
 import me.reidj.anxietydiagnostic.question.Question;
 import me.reidj.anxietydiagnostic.question.QuestionList;
+import me.reidj.anxietydiagnostic.user.User;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,8 +25,11 @@ public class QuestionController extends AbstractScene {
 
     @FXML
     private Label questionLabel;
+    @FXML
+    private Label timeLabel;
     private Iterator<Question> questionIterator;
     private final Gson gson = new Gson();
+    private Timeline timeline;
 
     public QuestionController() {
         super("questions/questionsScene.fxml");
@@ -32,6 +41,8 @@ public class QuestionController extends AbstractScene {
 
         if (questions != null)
             questionIterator = questions.questions.iterator();
+
+        startTimer();
 
         displayNextQuestion();
     }
@@ -45,6 +56,7 @@ public class QuestionController extends AbstractScene {
             return currentQuestion;
         } else {
             App.getApp().getPrimaryStage().showScene(App.getApp().getResultController().getScene());
+            stopTimer();
         }
         return null;
     }
@@ -63,7 +75,7 @@ public class QuestionController extends AbstractScene {
         questionLabel.setText("");
         App.getApp()
                 .getUser()
-                .questions()
+                .getQuestions()
                 .put(displayNextQuestion(), answer);
     }
 
@@ -75,5 +87,39 @@ public class QuestionController extends AbstractScene {
             e.printStackTrace();
             return null;
         }
+    }
+
+    // Метод для начала работы таймера
+    private void startTimer() {
+        if (timeline == null || timeline.getStatus() == Animation.Status.STOPPED) {
+            timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> Platform.runLater(this::updateTimer)));
+            timeline.setCycleCount(Animation.INDEFINITE);
+            timeline.play();
+        }
+    }
+
+    private void updateTimer() {
+        User user = App.getApp().getUser();
+        user.setSeconds(user.getSeconds() + 1);
+        if (user.getSeconds() == 60) {
+            user.setSeconds(0);
+            user.setMinutes(user.getMinutes() + 1);
+            if (user.getMinutes() == 60) {
+                user.setMinutes(0);
+                user.setHour(user.getHour() + 1);
+            }
+        }
+        timeLabel.setText(formatTime());
+    }
+
+    private void stopTimer() {
+        if (timeline != null && timeline.getStatus() == Animation.Status.RUNNING) {
+            timeline.stop();
+        }
+    }
+
+    public String formatTime() {
+        User user = App.getApp().getUser();
+        return String.format("%02d:%02d:%02d", user.getHour(), user.getMinutes(), user.getSeconds());
     }
 }
