@@ -15,20 +15,23 @@ public class ResultController extends AbstractScene {
         super("result/resultScene.fxml");
     }
 
-    private final int[] sums = new int[8];
+    private final int[] sums = new int[Factors.values().length];
 
     @FXML
     private void initialize() {
         for (Factors factor : Factors.values()) {
-            factor.getIndexes().forEach(index ->
-                    App.getApp().getUser().questions().forEach((question, s) -> {
-                        if (index == question.index && !question.answer.equals(s)) {
-                            sums[factor.ordinal()]++;
-                            if (sums[factor.ordinal()] == factor.getSum()) {
-                                resultLabel.setText(factor.getTitle());
-                            }
-                        }
-                    }));
+            factor.getIndexes().forEach(index -> acceptFactor(factor, index));
         }
+    }
+
+    private void acceptFactor(Factors factor, int index) {
+        App.getApp().getUser().questions().forEach((question, s) -> {
+            if (index == question.index && !question.answer.equals(s)) {
+                sums[factor.ordinal()]++;
+                if (sums[factor.ordinal()] == factor.getSum()) {
+                    resultLabel.setText(factor.getTitle());
+                }
+            }
+        });
     }
 }

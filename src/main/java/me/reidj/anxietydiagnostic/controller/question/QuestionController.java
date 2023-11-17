@@ -12,7 +12,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
-import java.util.List;
 
 public class QuestionController extends AbstractScene {
 
@@ -21,6 +20,7 @@ public class QuestionController extends AbstractScene {
     @FXML
     private Label questionLabel;
     private Iterator<Question> questionIterator;
+    private final Gson gson = new Gson();
 
     public QuestionController() {
         super("questions/questionsScene.fxml");
@@ -28,10 +28,10 @@ public class QuestionController extends AbstractScene {
 
     @FXML
     private void initialize() {
-        List<Question> questions = loadQuestionsFromJson();
+        QuestionList questions = loadQuestionsFromJson();
 
         if (questions != null)
-            questionIterator = questions.iterator();
+            questionIterator = questions.questions.iterator();
 
         displayNextQuestion();
     }
@@ -51,42 +51,29 @@ public class QuestionController extends AbstractScene {
 
     @FXML
     void onNoHandler() {
-        questionLabel.setText("");
-
-        // Отображение следующего вопроса
-        Question currentQuestion = displayNextQuestion();
-
-        App.getApp().getUser().questions().put(currentQuestion, "Нет");
+        extracted("Нет");
     }
 
     @FXML
     void onYesHandler() {
-        questionLabel.setText("");
-
-        // Отображение следующего вопроса
-        Question currentQuestion = displayNextQuestion();
-
-        App.getApp().getUser().questions().put(currentQuestion, "Да");
+        extracted("Да");
     }
 
-    private List<Question> loadQuestionsFromJson() {
-        try {
-            InputStream inputStream = getClass().getResourceAsStream(JSON_FILE_PATH);
-            InputStreamReader reader = null;
+    private void extracted(String answer) {
+        questionLabel.setText("");
+        App.getApp()
+                .getUser()
+                .questions()
+                .put(displayNextQuestion(), answer);
+    }
 
-            if (inputStream != null) reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-
-            Gson gson = new Gson();
-
-            QuestionList questionList = null;
-
-            if (reader != null) questionList = gson.fromJson(reader, QuestionList.class);
-
-            if (questionList != null) return questionList.questions;
+    private QuestionList loadQuestionsFromJson() {
+        try (InputStream inputStream = getClass().getResourceAsStream(JSON_FILE_PATH);
+             InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8)) {
+            return gson.fromJson(reader, QuestionList.class);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return null;
     }
 }

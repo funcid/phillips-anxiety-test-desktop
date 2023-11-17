@@ -30,10 +30,6 @@ public enum Errors implements Solid {
         return bool;
     }
 
-    public boolean checkWithoutAlert(String... strings) {
-        return solid.check(strings);
-    }
-
     @Override
     public String[] getMessage() {
         return solid.getMessage();

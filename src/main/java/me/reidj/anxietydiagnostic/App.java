@@ -16,7 +16,6 @@ public class App extends Application {
     @Getter
     private static App app;
 
-    @Getter
     @Setter
     private User user;
 
