@@ -16,9 +16,10 @@ import java.util.List;
 
 public class QuestionController extends AbstractScene {
 
+    private static final String JSON_FILE_PATH = "/questions.json";
+
     @FXML
     private Label questionLabel;
-    private static final String JSON_FILE_PATH = "/questions.json";
     private Iterator<Question> questionIterator;
 
     public QuestionController() {
@@ -39,7 +40,7 @@ public class QuestionController extends AbstractScene {
         if (questionIterator.hasNext()) {
             Question currentQuestion = questionIterator.next();
 
-            questionLabel.setText("#" + currentQuestion.getIndex() + ". " + currentQuestion.getText());
+            questionLabel.setText("#" + currentQuestion.index + ". " + currentQuestion.text);
 
             return currentQuestion;
         } else {
@@ -81,7 +82,7 @@ public class QuestionController extends AbstractScene {
 
             if (reader != null) questionList = gson.fromJson(reader, QuestionList.class);
 
-            if (questionList != null) return questionList.getQuestions();
+            if (questionList != null) return questionList.questions;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
