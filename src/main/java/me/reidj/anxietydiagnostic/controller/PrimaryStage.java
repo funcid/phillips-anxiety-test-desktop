@@ -3,16 +3,18 @@ package me.reidj.anxietydiagnostic.controller;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public record PrimaryStage(Stage stage) {
 
     public void setScene(Scene scene) {
-        showScene(scene);
+        stage.getIcons().add(new Image(getClass().getResource("/images/logo.jpg").getPath()));
         stage.setOnHidden(event -> Platform.exit());
         stage.sizeToScene();
         stage.setTitle("Диагностика Уровня Тревожности");
         stage.setResizable(false);
+        showScene(scene);
     }
 
     public void showScene(Scene scene) {
