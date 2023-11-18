@@ -1,55 +1,33 @@
 plugins {
-  id 'java'
-  id 'application'
-  id 'org.javamodularity.moduleplugin' version '1.8.12'
-  id 'org.openjfx.javafxplugin' version '0.0.13'
-  id 'org.beryx.jlink' version '2.25.0'
+    id 'java'
+    id 'application'
+    id 'org.javamodularity.moduleplugin' version '1.8.12'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '2.25.0'
 }
-
-group 'me.reidj'
-version '1.0-SNAPSHOT'
 
 repositories {
-  mavenCentral()
+    mavenCentral()
 }
-
-ext {
-  junitVersion = '5.9.2'
-}
-
-sourceCompatibility = '17'
-targetCompatibility = '17'
 
 tasks.withType(JavaCompile) {
-  options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8'
 }
 
 application {
-  mainModule = 'me.reidj.anxietydiagnostic'
-  mainClass = 'me.reidj.anxietydiagnostic.HelloApplication'
+    mainModule = 'me.reidj.anxietydiagnostic'
+    mainClass = 'me.reidj.anxietydiagnostic.App'
 }
 
 javafx {
-  version = '17.0.6'
-  modules = ['javafx.controls', 'javafx.fxml']
+    version = '17.0.6'
+    modules = ['javafx.controls', 'javafx.fxml']
 }
 
 dependencies {
-  compileOnly 'org.projectlombok:lombok:1.18.26'
-  annotationProcessor 'org.projectlombok:lombok:1.18.26'
-  implementation 'com.google.code.gson:gson:2.8.9'
-  implementation 'com.sun.mail:javax.mail:1.6.2'
-  implementation 'javax.activation:activation:1.1'
-}
-
-jlink {
-  imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
-  options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
-  launcher {
-    name = 'app'
-  }
-}
-
-jlinkZip {
-  group = 'distribution'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+    implementation 'javax.activation:activation:1.1'
 }
