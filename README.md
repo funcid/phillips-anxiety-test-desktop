@@ -48,7 +48,7 @@ mail.username=some@gmail.com
 mail.password=somepassword
 mail.port=465
 ```
-Найдите строки, содержащие данные для отправки писем, и замените их значения на ваши данных. 
+Найдите строки, содержащие данные для отправки писем, и замените их значения на ваши данные. 
 ```
 mail.host=smtp.gmail.com
 mail.username=ВАША_ПОЧТА@gmail.com
