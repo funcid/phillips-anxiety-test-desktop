@@ -38,8 +38,6 @@ public class AuthorizationController extends AbstractScene {
             return;
         if (Errors.FIELD_EMPTY.check(surname))
             return;
-        if (Errors.FIELD_EMPTY.check(patronymic))
-            return;
         if (Errors.FIELD_EMPTY.check(classroom))
             return;
 
