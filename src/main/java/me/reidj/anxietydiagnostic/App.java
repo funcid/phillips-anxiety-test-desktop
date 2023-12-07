@@ -14,7 +14,6 @@ import me.reidj.anxietydiagnostic.user.User;
 
 @Getter
 public class App extends Application {
-
     @Getter
     private static App app;
 

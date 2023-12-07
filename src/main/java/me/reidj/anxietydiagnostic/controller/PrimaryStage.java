@@ -11,6 +11,16 @@ import java.util.Objects;
 public record PrimaryStage(Stage stage) {
 
     public void setScene(Scene scene) {
+        try {
+            Class.forName("javafx.application.Application");
+        } catch (ClassNotFoundException e) {
+            showAlert(
+                    Alert.AlertType.ERROR,
+                    "Библиотеки JavaFX не найдены. Установите Java с поддержкой JavaFX, например OracleJRE 17 с официального сайта.",
+                    "Ошибка"
+            );
+            System.exit(1);
+        }
         stage.setOnHidden(event -> Platform.exit());
         stage.sizeToScene();
         stage.setTitle("Диагностика Уровня Тревожности");
