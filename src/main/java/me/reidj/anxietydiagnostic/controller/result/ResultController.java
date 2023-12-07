@@ -21,7 +21,7 @@ public class ResultController extends AbstractScene {
     @FXML
     private Label resultLabel;
     @FXML
-    private TextField teachetEmailTextField;
+    private TextField teacherEmailTextField;
 
     private final DirectoryChooser directoryChooser = new DirectoryChooser();
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss");
@@ -41,17 +41,17 @@ public class ResultController extends AbstractScene {
 
     @FXML
     void sendEmail() {
-        String resultText = resultLabel.getText();
+        String teacherEmailText = teacherEmailTextField.getText();
 
-        if (Errors.FIELD_EMPTY.check(resultText))
+        if (Errors.FIELD_EMPTY.check(teacherEmailText))
             return;
 
         User user = App.getApp().getUser();
 
         App.getApp().getMailSenderService().send(
-                teachetEmailTextField.getText(),
+                teacherEmailText,
                 "Результат прохождения теста",
-                getText(resultText, user)
+                getText(resultLabel.getText(), user)
         );
 
         App.getApp().getPrimaryStage().showAlert(
