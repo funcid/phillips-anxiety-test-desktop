@@ -4,36 +4,23 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.reidj.anxietydiagnostic.controller.result.ResultController">
-    <ImageView fitHeight="549.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" styleClass="left">
-    </ImageView>
-   <Label fx:id="resultLabel" layoutX="454.0" layoutY="127.0" prefHeight="99.0" prefWidth="331.0" wrapText="true">
+   <Label fx:id="resultLabel" layoutX="252.0" layoutY="112.0" prefHeight="99.0" prefWidth="331.0" wrapText="true">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <TextField fx:id="teachetEmailTextField" layoutX="483.0" layoutY="280.0" prefHeight="25.0" prefWidth="208.0" promptText="Почтовый адрес учителя" />
-   <Button layoutX="466.0" layoutY="325.0" mnemonicParsing="false" onAction="#sendEmail" text="Отправить" />
-    <Label layoutX="58.0" layoutY="174.0" prefHeight="60.0" prefWidth="170.0" text="Царюк Артём">
-        <font>
-            <Font size="24.0" />
-        </font>
-    </Label>
-    <Label layoutX="58.0" layoutY="230.0" text="Александр Приходько">
-        <font>
-            <Font size="24.0" />
-        </font>
-    </Label>
-   <Label layoutX="419.0" layoutY="250.0" text="Отправить результат прохождения преподавателю">
+   <TextField fx:id="teachetEmailTextField" layoutX="313.0" layoutY="266.0" prefHeight="25.0" prefWidth="208.0" promptText="Почтовый адрес учителя" />
+   <Button layoutX="296.0" layoutY="311.0" mnemonicParsing="false" onAction="#sendEmail" text="Отправить" />
+   <Label layoutX="252.0" layoutY="234.0" text="Отправить результат прохождения преподавателю">
       <font>
          <Font size="14.0" />
       </font>
    </Label>
-   <Button layoutX="611.0" layoutY="326.0" mnemonicParsing="false" onAction="#saveResult" text="Сохранить" />
+   <Button layoutX="441.0" layoutY="312.0" mnemonicParsing="false" onAction="#saveResult" text="Сохранить" />
     <stylesheets>
         <URL value="@../../styles/index.css" />
     </stylesheets>
