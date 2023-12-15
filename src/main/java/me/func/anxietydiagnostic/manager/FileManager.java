@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.manager;
+package me.func.anxietydiagnostic.manager;
 
 import java.io.File;
 import java.io.IOException;

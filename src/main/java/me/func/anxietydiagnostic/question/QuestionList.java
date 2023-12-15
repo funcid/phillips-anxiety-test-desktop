@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.question;
+package me.func.anxietydiagnostic.question;
 
 import java.util.List;
 

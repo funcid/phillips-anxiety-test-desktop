@@ -1,15 +1,15 @@
-package me.reidj.anxietydiagnostic.controller.result;
+package me.func.anxietydiagnostic.controller.result;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
-import me.reidj.anxietydiagnostic.App;
-import me.reidj.anxietydiagnostic.controller.AbstractScene;
-import me.reidj.anxietydiagnostic.exception.Errors;
-import me.reidj.anxietydiagnostic.factor.Factors;
-import me.reidj.anxietydiagnostic.user.User;
+import me.func.anxietydiagnostic.controller.AbstractScene;
+import me.func.anxietydiagnostic.exception.Errors;
+import me.func.anxietydiagnostic.App;
+import me.func.anxietydiagnostic.factor.Factors;
+import me.func.anxietydiagnostic.user.User;
 
 import java.io.File;
 import java.io.IOException;

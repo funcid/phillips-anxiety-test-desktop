@@ -6,16 +6,16 @@ module me.reidj.anxietydiagnostic {
     requires java.mail;
     requires static activation;
 
-    opens me.reidj.anxietydiagnostic to javafx.fxml;
-    opens me.reidj.anxietydiagnostic.controller.authorization to javafx.fxml;
-    opens me.reidj.anxietydiagnostic.controller.question to javafx.fxml;
-    opens me.reidj.anxietydiagnostic.controller.result to javafx.fxml;
-    opens me.reidj.anxietydiagnostic.controller to javafx.fxml;
-    opens me.reidj.anxietydiagnostic.question to com.google.gson;
+    opens me.func.anxietydiagnostic to javafx.fxml;
+    opens me.func.anxietydiagnostic.controller.authorization to javafx.fxml;
+    opens me.func.anxietydiagnostic.controller.question to javafx.fxml;
+    opens me.func.anxietydiagnostic.controller.result to javafx.fxml;
+    opens me.func.anxietydiagnostic.controller to javafx.fxml;
+    opens me.func.anxietydiagnostic.question to com.google.gson;
 
-    exports me.reidj.anxietydiagnostic;
-    exports me.reidj.anxietydiagnostic.controller.authorization;
-    exports me.reidj.anxietydiagnostic.controller.question;
-    exports me.reidj.anxietydiagnostic.controller.result;
-    exports me.reidj.anxietydiagnostic.controller;
+    exports me.func.anxietydiagnostic;
+    exports me.func.anxietydiagnostic.controller.authorization;
+    exports me.func.anxietydiagnostic.controller.question;
+    exports me.func.anxietydiagnostic.controller.result;
+    exports me.func.anxietydiagnostic.controller;
 }

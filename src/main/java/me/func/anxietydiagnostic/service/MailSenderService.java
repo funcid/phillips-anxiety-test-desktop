@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.service;
+package me.func.anxietydiagnostic.service;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;

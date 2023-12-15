@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.exception;
+package me.func.anxietydiagnostic.exception;
 
 public interface Solid {
 

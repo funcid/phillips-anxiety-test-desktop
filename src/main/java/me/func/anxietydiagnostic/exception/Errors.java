@@ -1,8 +1,8 @@
-package me.reidj.anxietydiagnostic.exception;
+package me.func.anxietydiagnostic.exception;
 
 import javafx.scene.control.Alert;
 import lombok.AllArgsConstructor;
-import me.reidj.anxietydiagnostic.App;
+import me.func.anxietydiagnostic.App;
 
 @AllArgsConstructor
 public enum Errors implements Solid {

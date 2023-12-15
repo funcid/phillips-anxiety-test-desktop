@@ -1,11 +1,11 @@
-package me.reidj.anxietydiagnostic.controller.authorization;
+package me.func.anxietydiagnostic.controller.authorization;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import me.reidj.anxietydiagnostic.App;
-import me.reidj.anxietydiagnostic.controller.AbstractScene;
-import me.reidj.anxietydiagnostic.exception.Errors;
-import me.reidj.anxietydiagnostic.user.User;
+import me.func.anxietydiagnostic.controller.AbstractScene;
+import me.func.anxietydiagnostic.exception.Errors;
+import me.func.anxietydiagnostic.App;
+import me.func.anxietydiagnostic.user.User;
 
 import java.util.HashMap;
 

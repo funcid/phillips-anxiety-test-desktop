@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.factor;
+package me.func.anxietydiagnostic.factor;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

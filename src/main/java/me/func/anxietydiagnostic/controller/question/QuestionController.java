@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.controller.question;
+package me.func.anxietydiagnostic.controller.question;
 
 import com.google.gson.Gson;
 import javafx.animation.Animation;
@@ -8,11 +8,11 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
-import me.reidj.anxietydiagnostic.App;
-import me.reidj.anxietydiagnostic.controller.AbstractScene;
-import me.reidj.anxietydiagnostic.question.Question;
-import me.reidj.anxietydiagnostic.question.QuestionList;
-import me.reidj.anxietydiagnostic.user.User;
+import me.func.anxietydiagnostic.controller.AbstractScene;
+import me.func.anxietydiagnostic.question.Question;
+import me.func.anxietydiagnostic.question.QuestionList;
+import me.func.anxietydiagnostic.App;
+import me.func.anxietydiagnostic.user.User;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.func.anxietydiagnostic.controller.authorization.AuthorizationController">
     <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="376.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" styleClass="user-image" />
     <TextField fx:id="nameField" layoutX="314.0" layoutY="183.0" prefHeight="35.0" prefWidth="208.0" promptText="Имя" />
     <Label layoutX="281.0" layoutY="148.0" text="Введите данные, чтобы продолжить">

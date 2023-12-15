@@ -1,4 +1,4 @@
-package me.reidj.anxietydiagnostic.controller;
+package me.func.anxietydiagnostic.controller;
 
 import javafx.application.Platform;
 import javafx.scene.Scene;

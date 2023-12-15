@@ -1,9 +1,9 @@
-package me.reidj.anxietydiagnostic.user;
+package me.func.anxietydiagnostic.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import me.reidj.anxietydiagnostic.question.Question;
+import me.func.anxietydiagnostic.question.Question;
 
 import java.util.Map;
 

@@ -1,16 +1,16 @@
-package me.reidj.anxietydiagnostic;
+package me.func.anxietydiagnostic;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
-import me.reidj.anxietydiagnostic.controller.PrimaryStage;
-import me.reidj.anxietydiagnostic.controller.authorization.AuthorizationController;
-import me.reidj.anxietydiagnostic.controller.question.QuestionController;
-import me.reidj.anxietydiagnostic.controller.result.ResultController;
-import me.reidj.anxietydiagnostic.manager.FileManager;
-import me.reidj.anxietydiagnostic.service.MailSenderService;
-import me.reidj.anxietydiagnostic.user.User;
+import me.func.anxietydiagnostic.controller.PrimaryStage;
+import me.func.anxietydiagnostic.controller.authorization.AuthorizationController;
+import me.func.anxietydiagnostic.controller.question.QuestionController;
+import me.func.anxietydiagnostic.controller.result.ResultController;
+import me.func.anxietydiagnostic.manager.FileManager;
+import me.func.anxietydiagnostic.service.MailSenderService;
+import me.func.anxietydiagnostic.user.User;
 
 @Getter
 public class App extends Application {
