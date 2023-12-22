@@ -100,9 +100,9 @@ public class ResultController extends AbstractScene {
         User user = App.getApp().getUser();
         try {
             App.getApp().getFileManager().createFileByPath(
-                    selectedDirectory.getAbsolutePath() + "\\"
+                    selectedDirectory.getAbsolutePath() + File.separator
                             + dateTimeFormatter.format(LocalDateTime.now()) + "_"
-                            + user.getName() + "_" + user.getSurname() + ".doc"
+                            + user.getName() + "_" + user.getSurname() + ".txt"
             );
         } catch (IOException e) {
             e.printStackTrace();
