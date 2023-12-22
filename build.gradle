@@ -10,13 +10,13 @@ repositories {
     mavenCentral()
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
 application {
-    mainModule = 'me.reidj.anxietydiagnostic'
-    mainClass = 'me.reidj.anxietydiagnostic.App'
+    mainModule = 'me.func.anxietydiagnostic'
+    mainClass = 'me.func.anxietydiagnostic.App'
 }
 
 javafx {
