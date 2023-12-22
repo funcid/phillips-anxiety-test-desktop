@@ -15,8 +15,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'me.reidj.anxietydiagnostic'
-    mainClass = 'me.reidj.anxietydiagnostic.App'
+    mainModule = 'me.func.anxietydiagnostic'
+    mainClass = 'me.func.anxietydiagnostic.App'
 }
 
 javafx {
