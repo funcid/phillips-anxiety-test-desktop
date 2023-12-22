@@ -1,4 +1,4 @@
-module me.reidj.anxietydiagnostic {
+module me.func.anxietydiagnostic {
     requires javafx.controls;
     requires javafx.fxml;
     requires static lombok;
